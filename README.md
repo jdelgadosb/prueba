@@ -1,2 +1,27 @@
-# prueba
-fdsa
+| Campo                        | Valor                                                                                                                                                             |
+|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Regla_ID**                 | Pendiente                                                                                                                                                         |
+| **Plataforma**               | Pendiente                                                                                                                                                         |
+| **Fecha_Creacion**           | 2025-02-21 12:00:00 (AST)                                                                                                                                        |
+| **Regla_Familia**            | Pendiente                                                                                                                                                         |
+| **Regla_Tipo**               | InterReporte                                                                                                                                                      |
+| **Discrepancia_Descripcion** | Si el tipo de producto asociado en PE01 es igual a C o A, el deudor debe ser reportado con al menos un crédito en por lo menos uno de los siguientes reportes: RC01, RC03, RC05, RC09 u OA03. De lo contrario, se generará una alerta. |
+| **Discrepancia_Mensaje**     | Deudor con tipo de producto C o A no reportado en los reportes requeridos.                                                                                       |
+| **Discrepancia_Tipo**        | Error                                                                                                                                                             |
+| **Dimension_Calidad**        | Integridad                                                                                                                                                        |
+| **Logica_Funcional**         | Si el campo Tipo_Producto en PE01 es igual a C o A, entonces el deudor debe tener al menos un crédito reportado en RC01, RC03, RC05, RC09 u OA03. Si no existe dicho crédito en ninguno de estos reportes, se genera una alerta. |
+| **Logica_Tecnica**           | **Requisitos:**  <br> - El campo PE01_Tipo_Producto no debe estar nulo. <br> - Los reportes RC01, RC03, RC05, RC09 y OA03 deben estar disponibles para la validación. <br><br> **Validación:** <br> - Se extraen los registros del reporte PE01 con PE01_Tipo_Producto = C o A. <br> - Se verifica si los deudores de PE01 aparecen con al menos un crédito en cualquiera de los reportes: RC01, RC03, RC05, RC09 u OA03. <br> - Si un deudor con PE01_Tipo_Producto = C o A no tiene créditos en estos reportes, se genera una alerta. <br><br> **Excepciones:** <br> - Ninguna excepción definida. |
+| **Reportes_Afectados**       | PE01, RC01, RC03, RC05, RC09, OA03                                                                                                                               |
+| **Campos_Afectados**         | PE01_Tipo_Producto, PE01_Deudor_ID, RC01_Deudor_ID, RC03_Deudor_ID, RC05_Deudor_ID, RC09_Deudor_ID, OA03_Deudor_ID                                              |
+| **Discrepancia_Tiempo_Solucion** | Pendiente                                                                                                                                                    |
+| **Validaciones_PAMF_Fix**     | Pendiente                                                                                                                                                         |
+| **Recomendacion_Sanciones**  | Pendiente                                                                                                                                                         |
+| **Regla_Desarrollador**      | Pendiente                                                                                                                                                         |
+| **Regla_Steward**            | Pendiente                                                                                                                                                         |
+| **Periodo_Ini**              | 20250221                                                                                                                                                          |
+| **Periodo_Fin**              | null                                                                                                                                                              |
+| **Regla_Version**            | 1                                                                                                                                                                 |
+| **Modificado_Por**           | n/a                                                                                                                                                               |
+| **Campos_Modificados**       | n/a                                                                                                                                                               |
+| **Razon_Cambios**            | n/a                                                                                                                                                               |
+| **Aprobado_Por**             | n/a                                                                                                                                                               |
